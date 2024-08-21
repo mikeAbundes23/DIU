@@ -1,0 +1,46 @@
+body {
+  background-image: url(https://preview.redd.it/co2dsjkjxof71.jpg?auto=webp&s=e5e5a0f6d9694e26e5c7283b0e078ae8e1ebd1fa);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: "New Amsterdam", sans-serif; /* Es la fuente de google fonts */
+}
+
+nav {
+  background-color: rgb(0, 0, 0);
+}
+
+h3 {
+  font-size: 40px;
+  color: rgba(241, 6, 6, 0.623);
+}
+
+div.contenedor-data {
+  color: white;
+}
+
+.list-group-item {
+  color: rgb(255, 255, 255);
+  background-color: rgba(10, 10, 10, 0.459);
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.123);
+}
+
+.list-group-item:hover {
+  background-color: rgba(241, 6, 6, 0.623);
+}
+
+.list-group-item:focus {
+  background-color: rgba(161, 161, 161, 0.598);
+}
+
+.card {
+  color: white;
+  background-color: rgba(10, 10, 10, 0.459);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.123);;
+}
+
+.card:hover {
+  background-color: rgba(241, 6, 6, 0.623);
+}
