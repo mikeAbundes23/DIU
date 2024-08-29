@@ -1,0 +1,58 @@
+body {
+    background-image: url(https://cdn.wallpapersafari.com/62/40/Ls8xNQ.jpg);
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+h3 {
+    color: white;
+    font-weight: 500;
+}
+
+h6 {
+    color: white;
+    font-weight: 300;
+}
+
+.container {
+    margin-top: 20px;
+    width: 50%;
+}
+
+.list-group-item {
+    background-color: #000000a8;
+    color: white;
+    margin-bottom: 3px;
+    border: 0cm;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-group-item:hover {
+    background-color: #474545;
+}
+
+#completedList  .form-check-label {
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.title {
+    background-color: #000000a8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.deleteButton {
+    background-color: #f50000bb;
+    color: white;
+    border: 0;
+}
+
+
+
+
