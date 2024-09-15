@@ -1,26 +1,22 @@
 body {
     background-image: url(https://wallpapercave.com/wp/wp7287642.jpg);
     background-size: cover; 
-  
-    /* font-family: "Fjalla One", sans-serif;
-    font-weight: 400; */
-
     font-family: "Play", sans-serif;
     font-weight: 700;
     font-style: normal;
-    /* font-family: "Press Start 2P", system-ui;
-    font-weight: 100; */
     display: flex;
-    
+}
+
+h1 {
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
 }
 
 .container {
     flex: 1;
     width: 50%;
-    margin-top: 20px;
     margin-left: 20px;
-    /* background-color: #0000009c; */
-    border-radius: 10px;
 }
 
 .container-card {
@@ -28,15 +24,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-left: 20px;
     margin-right: 20px;
-    /* //background-color: #0000009c; */
-    border-radius: 10px;
 }
 
 .card {
-    background-color: #0000005d;
+    background-color: #0000002f;
 }
 
 .list-group-item {
@@ -44,7 +38,7 @@ body {
 }
 
 #pokemon-info .list-group-item {
-    background-color: #000000d5;
+    background-color: #000000ce;
     color: white;
 }
 
@@ -53,3 +47,73 @@ body {
     color: white;
     cursor: pointer;
 }
+
+/* Esta icóno de pokebola es recuperada de https://codepen.io/kjj6198/pen/amRqqK */
+.icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    box-sizing: border-box;
+    border-radius: 0;
+    margin-right: 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+  
+  *,
+  *:after,
+  *:before {
+    box-sizing: border-box;
+  }
+  
+  .poke-ball.icon {
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    
+    background-color: transparent;
+    border: .2em solid #333;
+    
+    border-radius: 50%;
+    background-image: linear-gradient(0deg, #fff 0%);
+    
+    transition: .5s ease transform;
+    
+    &:hover {
+      transform: rotate(360deg);
+    }
+    
+    &:before,
+    &:after {
+      content: "";
+      alt: attr(data-alt);
+      position: absolute;
+    }
+    
+    &:before {
+      top: calc(50% - 0.1em);
+      width: 100%;
+      height: 0.2em;
+      background-color: #333;
+    }
+    
+    &:after {
+      width: .8em;
+      height: .8em;
+      top: calc(50% - .4em);
+      left: calc(50% - .4em);
+      
+      border-radius: 50%;
+      border: .2em solid #333;
+      color: #fff;
+      background-color: #fff;
+    }
+}
+
+.title-pokemon {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }

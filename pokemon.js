@@ -19,7 +19,7 @@ const appendAlert = (message) => {
     alertPlaceholder.append(wrapper)
 }
 
-
+// Función para limpiar la pantalla
 function clearScreen() {
     card.style.display = 'none';
     btnClear.style.display = 'none';
@@ -29,6 +29,7 @@ function clearScreen() {
     historyLabel.style.display = 'none';
 }
 
+// Función para añadir un item al historial
 function addToHistory(pokemon) {
     const historyItem = document.createElement('li');
     historyItem.className = 'list-group-item';
@@ -42,8 +43,9 @@ function addToHistory(pokemon) {
     historyList.insertBefore(historyItem, historyList.firstChild);
 }
 
+// Función para crear la tarjeta del pokemon
 function createPokemonCard(data) {
-    //const pokemonImage = data.sprites.front_default;
+    // Obtenemos los elementos del DOM
     const image = document.getElementById('pokemon-img');
     const pokemonName = document.getElementById('pokemon-name');
     const pokemonId = document.getElementById('pokemon-id');
@@ -80,8 +82,6 @@ function createPokemonCard(data) {
     card.style.display = 'block';
     btnClear.style.display = 'block';
     addToHistory(nameToUpperCase);
-
-
 }
 
 async function fetchPokemon() {
@@ -91,12 +91,13 @@ async function fetchPokemon() {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonLower}`);
         tabInput.value = '';
 
+        // Si el pokemon no existe, mostramos una alerta
         if (!response.ok) {
             alertPlaceholder.innerHTML = '';
             appendAlert(`Pokemon ${pokemonLower} not found`);
             card.style.display = 'none';
             btnClear.style.display = 'block';
-            return;
+            alertPlaceholder.style.display = 'block';      
         } else {
             alertPlaceholder.innerHTML = '';
         }
@@ -112,7 +113,7 @@ async function fetchPokemon() {
 
 
 btnSearch.addEventListener('click', fetchPokemon);
-//fetchPokemon();
+
 tabInput.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         fetchPokemon();
